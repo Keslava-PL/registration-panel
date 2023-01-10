@@ -3,7 +3,8 @@
   min-width: 80 px;
   max-height: 15px;
   min-height: 15px;
-  background-color: rgb(167, 10, 10);}
+  background-color: rgb(167, 10, 10);
+}
 #strenghtenButton2 {
   max-width: 80 px;
   min-width: 80 px;
@@ -22,7 +23,6 @@
   margin: 0 auto;
 }
 .main {
-
   max-width: 400px;
   max-height: 400px;
   margin: 0 auto;
@@ -43,14 +43,12 @@
   margin-top: 5px;
 }
 .registrationPanel {
-
   margin: 0 auto;
-  
+
   height: 200px;
   max-height: 1000px;
   display: grid;
   justify-content: center;
-  
 }
 
 #login {
