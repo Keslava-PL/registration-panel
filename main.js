@@ -7,9 +7,9 @@ const sUButton3 = document.querySelector('#strenghtenButton3');
 const signUpButton =document.querySelector('#signUpButton');
 
 signUpButton.setAttribute('disabled','');
-sUButton.setAttribute('hidden','');
-sUButton2.setAttribute('hidden','');
-sUButton3.setAttribute('hidden','');
+//sUButton.setAttribute('hidden','');
+//sUButton2.setAttribute('hidden','');
+//sUButton3.setAttribute('hidden','');
 
 function checkPassword(password){
 
@@ -22,28 +22,40 @@ function checkPassword(password){
       sUButton2.removeAttribute('hidden','');
       sUButton3.removeAttribute('hidden','');
   }
-  else if(password.length >= 8 
-    && password.length <12
+  else if(password.length > 7 
+    && password.length < 12
     && upperCase === true){
 
       sUButton.removeAttribute('hidden','');
       sUButton2.removeAttribute('hidden','');
+      sUButton3.setAttribute('hidden','');
+  }
+  else if(password.length === 0){
+    sUButton.setAttribute('hidden','');
+    sUButton2.setAttribute('hidden','');
+    sUButton3.setAttribute('hidden','');
   }
   else{
     
-    sUButton.removeAttribute('hidden',''); 
+    sUButton.removeAttribute('hidden','');
+    sUButton2.setAttribute('hidden','');
+    sUButton3.setAttribute('hidden','');
   }
 }
 function upperCaseCheck (pass){
-  return /[a-z]/.test(pass) && /[A-Z]/.test(pass);
+  return  /[A-Z]/.test(pass);
 }
 
 function digitCheck(pass){
   return /[1-9]/.test(pass);
 }
 
-if(loginInput.value.length>0 && passwordInput.value.length>0){
-  checkPassword(passwordInput.value);
-  signUpButton.removeAttribute('disabled','');
-}
 
+
+passwordInput.addEventListener("input", function(){
+    if(loginInput.value.length>0 && passwordInput.value.length>0){
+        checkPassword(passwordInput.value);
+        signUpButton.removeAttribute('disabled','');
+      }
+
+})

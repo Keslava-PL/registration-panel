@@ -3,29 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Registration Panel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style></style>
   </head>
   <body>
-    <article>
-      <h1>Tytuł</h1>
-      <p>
-        <input id="login" placeholder="Login">
-      </p>
-      <p>
-        <input id="password" placeholder="Hasło">
-      </p>
-      <p>
-        <label>Password strength: </label>
-        <button id="strenghtenButton"></button>
-        <button id="strenghtenButton2"></button>
-        <button id="strenghtenButton3"></button>
-      </p>
-      <p>
-        <button id="signUpButton">Sign up</button>
-      </p>
+    <div class="container">
+      <main class="main">
+        <div class="logoContainer">
+          <img src="./library/signUpIcon.png" alt="image" />
+        </div>
+        <h1 class="title">Tytuł</h1>
+        <div class="registrationPanel">
+          <input id="login" placeholder="Login" />
 
-    </article>
-   <script src="./main.js"></script>
+          <input id="password" placeholder="Hasło" />
+
+          <p class="strenghtenButtonContainer">
+            <label id="strenghtLabel">Password strength: </label>
+            <button class="strenghtButton" id="strenghtenButton"></button>
+            <button class="strenghtButton" id="strenghtenButton2"></button>
+            <button class="strenghtButton" id="strenghtenButton3"></button>
+          </p>
+          <button id="signUpButton">Sign up</button>
+        </div>
+      </main>
+    </div>
+    <script src="./main.js"></script>
   </body>
 </html>
